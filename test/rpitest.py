@@ -1,3 +1,6 @@
+# 인체감지시 이미지캡처
+
+```
 import RPi.GPIO as GPIO
 import time
 from picamera import PiCamera
@@ -20,3 +23,4 @@ while True:
         except:
              camera.stop_preview()
     time.sleep(3)
+```
