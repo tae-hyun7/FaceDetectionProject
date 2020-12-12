@@ -170,3 +170,6 @@ cv2.destroyAllWindows()
 
 
 # 프로젝트 결과물
+### 사진 인식
+### 화상회의 얼굴인식(zoom) 
+
