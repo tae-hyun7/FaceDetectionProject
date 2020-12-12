@@ -30,8 +30,10 @@
 
 # 프로젝트 주요내용 
 ## 1. 사용프로그램 및 모듈
-
 ### 1) OpenCv
+![opencv](https://user-images.githubusercontent.com/71091406/101994107-34810900-3d03-11eb-9bd7-680510086ecf.png)
+
+
 1. OpenSource Computer Vision의 약자로 
     다양한 영상/동영상 처리에 사용할 수 있는 오픈소스 라이브러리 
 
@@ -42,6 +44,7 @@
    (예를 들어 윤곽선 검출,  노이즈 제거,  이미지 스티칭을 이용한 파노라믹 사진제작)
 
 4. 실시간 이미지 프로세싱에 중점을 둔 라이브러리
+
 
 ### 2) Haar Cascade
 
@@ -64,11 +67,41 @@
 4. Cascading Classifiers 
    -  현재 윈도우가 있는 영역이 얼굴 영역인지를 단계별로  체크
 
-
 ## 2. 구현방법
-
+![구현방법](https://user-images.githubusercontent.com/71091406/101994156-74e08700-3d03-11eb-82a2-92474e30cbe0.png)
 
 ## 3. 프로그램 코드 및 설명
+
+### 3) face_training.py
+
+import cv2
+import numpy as np
+from PIL import Image
+import os
+
+path = 'dataset'
+recognizer = cv2.face.LBPHFaceRecognizer_create()
+detector = cv2.CascadeClassifier("haarcascades/haarcascade_frontalface_default.xml");
+
+def getImagesAndLabels(path):
+    imagePaths = [os.path.join(path,f) for f in os.listdir(path)]     
+    faceSamples=[]
+    ids = []
+    for imagePath in imagePaths:
+        PIL_img = Image.open(imagePath).convert('L') # convert it to grayscale
+        img_numpy = np.array(PIL_img,'uint8')
+        id = int(os.path.split(imagePath)[-1].split(".")[1])
+        faces = detector.detectMultiScale(img_numpy)
+        for (x,y,w,h) in faces:
+            faceSamples.append(img_numpy[y:y+h,x:x+w])
+            ids.append(id)
+    return faceSamples,ids
+print ("\n [INFO] Training faces. It will take a few seconds. Wait ...")
+faces,ids = getImagesAndLabels(path)
+recognizer.train(faces, np.array(ids))
+
+recognizer.write('trainer/trainer.yml') # recognizer.save() worked on Mac, but not on Pi
+print("\n [INFO] {0} faces trained. Exiting Program".format(len(np.unique(ids))))
 
 ## 4. 프로그램 동작원리 요약
 
