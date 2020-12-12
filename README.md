@@ -171,5 +171,7 @@ cv2.destroyAllWindows()
 
 # 프로젝트 결과물
 ### 사진 인식
+[![Video Label](https://user-images.githubusercontent.com/54888988/101995574-3e5c3980-3d0e-11eb-8f1f-70c54202fe0f.png)](https://www.youtube.com/watch?v=8FkADlbuME8?t=0s)
+---
 ### 화상회의 얼굴인식(zoom) 
 
