@@ -102,7 +102,7 @@ recognizer.train(faces, np.array(ids))
 recognizer.write('trainer/trainer.yml') # recognizer.save() worked on Mac, but not on Pi
 print("\n [INFO] {0} faces trained. Exiting Program".format(len(np.unique(ids))))
 ```
-### 4) face_recognition.py
+### 4) 판별: face_recognition.py
 **OpenCV 라이브러리를 사용하여 실시간으로 인식된 얼굴과 trainer.yml을 비교하여 이름과 유사도를 측정한다.**
 ```
 import cv2
