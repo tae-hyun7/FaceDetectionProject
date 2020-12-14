@@ -71,6 +71,37 @@
 
 ## 3. 프로그램 코드 및 설명
 
+### 1) face_detection.py
+**OpenCV를 사용해 영상을 촬영하고 영상에 촬영된 사람의 얼굴을 인식한다.
+**얼굴인식은 Haar feature-based cascade classifiers를 사용한다.
+```
+import numpy as np
+import cv2
+faceCascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
+cap = cv2.VideoCapture(0)
+cap.set(3,640) 
+cap.set(4,480) 
+while True:
+    ret, img = cap.read()
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    faces = faceCascade.detectMultiScale(
+        gray,
+        scaleFactor=1.2,
+        minNeighbors=5,
+        minSize=(20, 20)
+    )
+    for (x,y,w,h) in faces:
+        cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
+        roi_gray = gray[y:y+h, x:x+w]
+        roi_color = img[y:y+h, x:x+w]
+    cv2.imshow('video',img) 
+    k = cv2.waitKey(30) & 0xff
+    if k == 27: 
+        break
+cap.release()
+cv2.destroyAllWindows()
+```
+
 ### 2) face_dataset.py
 ```
 import cv2
@@ -208,10 +239,15 @@ cv2.destroyAllWindows()
 ```
 ## 4. 프로그램 동작원리 요약
 
+1. OpenCV의 haar cascades를 이용하여  각 사용자의 얼굴을 인식하여 흑백 이미지 파일로 저장
+
+2. 미리 저장해 두었던 각 사용자별 얼굴 이미지를 통하여 이를 OpenCV의 라이브러리를 통해 학습시키고, 이를 yml 파일로 저장
+
+3. 인식된 얼굴과 trainer.yml 파일에 추출된 각 사용자의 특징과 일치하는지 확인해서 알려준다.
 
 # 프로젝트 결과물
 ### 사진 인식
 [![Video Label](https://user-images.githubusercontent.com/54888988/101995574-3e5c3980-3d0e-11eb-8f1f-70c54202fe0f.png)](https://www.youtube.com/watch?v=8FkADlbuME8?t=0s)
 ---
 ### 화상회의 얼굴인식(zoom) 
-
+[![Video Label](https://img.youtube.com/vi/U9Vv9ufDmBs/0.jpg)](www.youtube.com/watch?v=U9Vv9ufDmBs)
