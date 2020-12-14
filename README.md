@@ -144,6 +144,7 @@ cv2.destroyAllWindows()
 
 ### 3) face_training.py
 **Harra cascade를 이용하여 여러 장의 사진을 찍어 얼굴 학습하여 yml파일로 저장**
+```
 import cv2
 import numpy as np
 from PIL import Image
