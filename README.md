@@ -250,4 +250,4 @@ cv2.destroyAllWindows()
 [![Video Label](https://user-images.githubusercontent.com/54888988/101995574-3e5c3980-3d0e-11eb-8f1f-70c54202fe0f.png)](https://www.youtube.com/watch?v=8FkADlbuME8?t=0s)
 ---
 ### 화상회의 얼굴인식(zoom) 
-[![Video Label](https://img.youtube.com/vi/U9Vv9ufDmBs/0.jpg)](www.youtube.com/watch?v=U9Vv9ufDmBs)
+[![Video Label](https://img.youtube.com/vi/U9Vv9ufDmBs/0.jpg)](www.youtube.com/watch?v=U9Vv9ufDmBs?t=0s)
