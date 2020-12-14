@@ -71,7 +71,7 @@
 
 ## 3. 프로그램 코드 및 설명
 
-### 1) face_detection.py
+### 1) 인식:face_detection.py
 **OpenCV를 사용해 영상을 촬영하고 영상에 촬영된 사람의 얼굴을 인식한다.**
 **(얼굴인식은 Haar feature-based cascade classifiers를 사용한다.)**
 ```
@@ -250,4 +250,4 @@ cv2.destroyAllWindows()
 [![Video Label](https://user-images.githubusercontent.com/54888988/101995574-3e5c3980-3d0e-11eb-8f1f-70c54202fe0f.png)](https://www.youtube.com/watch?v=8FkADlbuME8?t=0s)
 ---
 ### 화상회의 얼굴인식(zoom) 
-[![Video Label](https://img.youtube.com/vi/U9Vv9ufDmBs/0.jpg)](https://www.youtube.com/watch?v=U9Vv9ufDmBs?t=0s)
+[![Video Label](https://img.youtube.com/vi/U9Vv9ufDmBs/1.jpg)](https://www.youtube.com/watch?v=U9Vv9ufDmBs?t=0s)
