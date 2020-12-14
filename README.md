@@ -73,7 +73,7 @@
 
 ### 1) face_detection.py
 **OpenCV를 사용해 영상을 촬영하고 영상에 촬영된 사람의 얼굴을 인식한다.**
-**얼굴인식은 Haar feature-based cascade classifiers를 사용한다.**
+**(얼굴인식은 Haar feature-based cascade classifiers를 사용한다.)**
 ```
 import numpy as np
 import cv2
