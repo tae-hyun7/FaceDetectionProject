@@ -16,8 +16,8 @@
 
 
 # 프로젝트 목적
-+ 라즈베리파이 및 OpenCV 기반으로 하는 software및 hardware 개발 프로젝트로서 
-각 사용자들의 얼굴 인식을 하여 사용자들 사이에서 이름, 유사도 정보를 공유할 수 있게 의사 소통하는 시스템을 구현합니다
+**라즈베리파이 및 OpenCV 기반으로 하는 software및 hardware 개발 프로젝트로서 
+각 사용자들의 얼굴 인식을 하여 사용자들 사이에서 이름, 유사도 정보를 공유할 수 있게 의사 소통하는 시스템을 구현합니다.**
 
 # 프로젝트 목표 및 기대효과
 ### 목표
@@ -30,7 +30,7 @@
 
 # 프로젝트 주요내용 
 ## 1. 사용프로그램 및 모듈
-### 1) OpenCv
+### 1) OpenCV
 ![opencv](https://user-images.githubusercontent.com/71091406/101994107-34810900-3d03-11eb-9bd7-680510086ecf.png)
 
  1. OpenSource Computer Vision의 약자로 
@@ -240,15 +240,15 @@ cv2.destroyAllWindows()
 ```
 ## 4. 프로그램 동작원리 요약
 
-1. OpenCV의 haar cascades를 이용하여  각 사용자의 얼굴을 인식하여 흑백 이미지 파일로 저장
+**1. OpenCV의 haar cascades를 이용하여  각 사용자의 얼굴을 인식하여 흑백 이미지 파일로 저장**
 
-2. 미리 저장해 두었던 각 사용자별 얼굴 이미지를 통하여 이를 OpenCV의 라이브러리를 통해 학습시키고, 이를 yml 파일로 저장
+**2. 미리 저장해 두었던 각 사용자별 얼굴 이미지를 통하여 이를 OpenCV의 라이브러리를 통해 학습시키고, 이를 yml 파일로 저장**
 
-3. 인식된 얼굴과 trainer.yml 파일에 추출된 각 사용자의 특징과 일치하는지 확인해서 알려준다.
+**3. 인식된 얼굴과 trainer.yml 파일에 추출된 각 사용자의 특징과 일치하는지 확인해서 알려준다.**
 
 # 프로젝트 결과물
-### 사진 인식
+## 사진 인식
 [![Video Label](https://user-images.githubusercontent.com/54888988/101995574-3e5c3980-3d0e-11eb-8f1f-70c54202fe0f.png)](https://www.youtube.com/watch?v=8FkADlbuME8?t=0s)
 ---
-### 화상회의 얼굴인식(zoom) 
+## 화상회의 얼굴인식(zoom) 
 [![Video Label](https://img.youtube.com/vi/U9Vv9ufDmBs/0.jpg)](https://www.youtube.com/watch?v=U9Vv9ufDmBs?t=0s)
