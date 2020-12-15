@@ -147,6 +147,7 @@ print("\n [INFO] Exiting Program and cleanup stuff")
 cam.release()
 cv2.destroyAllWindows()
 ```
+![데이터수집](https://user-images.githubusercontent.com/54888988/102169590-e53f0200-3ed5-11eb-8ca7-364f49b713b7.png)
 
 ### 3)학습: face_training.py
 **Harra cascade를 이용하여 여러 장의 사진을 찍어 얼굴 학습하여 yml파일로 저장**
