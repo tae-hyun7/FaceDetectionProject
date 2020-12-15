@@ -102,7 +102,7 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-### 2) face_dataset.py
+### 2) 데이터수집: face_dataset.py
 **face_id 를 이용해 사용자의 고유번호를 부여한다.**<br>
 **.imwrite()를 통해 dataset 폴더 안에 user[고유번호].jpg 이미지를 저장한다.**
 ```
@@ -141,7 +141,7 @@ cam.release()
 cv2.destroyAllWindows()
 ```
 
-### 3) face_training.py
+### 3)학습: face_training.py
 **Harra cascade를 이용하여 여러 장의 사진을 찍어 얼굴 학습하여 yml파일로 저장**
 ```
 import cv2
@@ -186,19 +186,15 @@ cascadePath = "haarcascades/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath);
 font = cv2.FONT_HERSHEY_SIMPLEX
 
-#iniciate id counter
 id = 0
 
-# names related to ids: example ==> loze: id=1,  etc
 # 사용자 이름 설정
 names = ['chan', 'LimTaeHyun', 'JangTaeYoung', 'Jongsub']
 
-# Initialize and start realtime video capture
 cam = cv2.VideoCapture(0)
 cam.set(3, 640) # set video widht
 cam.set(4, 480) # set video height
 
-# Define min window size to be recognized as a face
 minW = 0.1*cam.get(3)
 minH = 0.1*cam.get(4)
 
@@ -232,7 +228,7 @@ while True:
     k = cv2.waitKey(10) & 0xff # Press 'ESC' for exiting video
     if k == 27:
         break
-# Do a bit of cleanup
+
 print("\n [INFO] Exiting Program and cleanup stuff")
 cam.release()
 cv2.destroyAllWindows()
