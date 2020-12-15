@@ -103,6 +103,8 @@ cv2.destroyAllWindows()
 ```
 
 ### 2) face_dataset.py
+**face_id 를 이용해 사용자의 고유번호를 부여한다.
+**.imwrite()를 통해 ㅇㅁㅅㅁㄴㄷㅅ 폴더 안에 user[고유번호].jpg 이미지를 저장한다.
 ```
 import cv2
 import os
