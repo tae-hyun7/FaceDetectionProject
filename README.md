@@ -57,13 +57,13 @@
 
 #### Haar Cascade 알고리즘 4단계
 
- **1. Haar Feature Selection **
+ **1. Haar Feature Selection**
      -  이미지 전체 스캔하고  하르특징 계산하여 영역내 픽셀 합의 차이 이용
- **2. Creating  Integral Images **
+ **2. Creating  Integral Images**
      - 픽셀의 합을 구하기는 것을 빠르게 하기 위해 적분 이미지 사용
- **3. Adaboost Training **
+ **3. Adaboost Training**
     - 얼굴 검출을 하는데 도움이 되는 의미 있는 특징계산
- **4. Cascading Classifiers **
+ **4. Cascading Classifiers**
     -  현재 윈도우가 있는 영역이 얼굴 영역인지를 단계별로  체크
 
 ## 2. 구현방법
