@@ -21,10 +21,10 @@ while(True):
 		count += 1
 		cv2.imwrite("dataset/user." + str(face_id) + '.' + str(count) + ".jpg",gray[y:y+h,x:x+w])
 		cv2.imshow('image', img)
-	k = cv2.waitKey(100) & 0xff #  press 'ESC' for exiting video
+	k = cv2.waitKey(100) & 0xff
 	if k == 27:
 		break
-	elif count >= 30: # Take 30 face sample and stop video
+	elif count >= 30:
 		break
 
 print("\n [INFO] Exiting Program and cleanup stuff")
