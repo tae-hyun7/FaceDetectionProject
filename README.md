@@ -55,7 +55,7 @@
 
  4. Haarcascade 라이브러리를 사용하여 인식할 수 있는 오브젝트는 사람의 정면 얼굴, 얼굴 안의 눈, 고양이 얼굴, 사람의 몸 각 부분들, 컬러 및 차량을 포함
 
-### Haar Cascade 알고리즘 4단계
+### -Haar Cascade 알고리즘 4단계-
 
  **1. Haar Feature Selection**
       
